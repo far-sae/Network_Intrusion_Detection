@@ -133,12 +133,9 @@ print('Model loaded for real-time detection')
 
 # Simulate real-time detection (Here, you could integrate with live network data capture libraries like pyshark or scapy)
 def real_time_detection(new_data):
-    """
-    This function simulates real-time detection using the pre-trained CNN model.
-    'new_data' should be a 1D array (a single sample) representing the features of the network traffic.
-    """
+    
     # Ensure new_data has the same number of features as the training data
-    assert len(new_data) == X_train.shape[1], "New data must have the same number of features as the training data"
+    assert len(new_data) == X_train.shape[1], 
 
     # Reshape and scale the new data (following the same preprocessing as the training data)
     new_data = np.array(new_data).reshape(1, -1)  # Reshape for a single sample
